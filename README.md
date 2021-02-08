@@ -16,3 +16,5 @@ coming soon
 - [内積の２乗](https://ameblo.jp/accade/entry-11899474992.html)
 - [二次形式](https://mathwords.net/vecmatseki)
 - [転置行列の性質（＋α）](http://web.wakayama-u.ac.jp/~wuhy/am3.pdf)
+- [Woodburyの恒等式](https://mathtrain.jp/woodbury)
+- [Sherman-Morrisonの公式](http://ibisforest.org/index.php?Sherman-Morrison%E3%81%AE%E5%85%AC%E5%BC%8F)
