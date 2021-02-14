@@ -1,14 +1,14 @@
 import numpy as np
 
 class ObservationData(object):
-    def __init__(self, mu, std, sampling):
+    def __init__(self, mu, var, sampling):
         self.x = None
         self.y = None
-        self.generate(mu, std, sampling)
+        self.generate(mu, var, sampling)
     
-    def generate(self, mu, std, sampling):
+    def generate(self, mu, var, sampling):
         # 正規分布に従いサンプリング
-        self.x = np.random.normal(mu, std, sampling)
+        self.x = np.random.normal(mu, np.sqrt(var), sampling)
         # 残差
         residual = 0.05 * np.random.randn(len(self.x))
         # 正規分布 + 残差
