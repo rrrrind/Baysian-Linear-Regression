@@ -7,7 +7,7 @@
 \>\>\> docker exec -it baysian-lr /bin/bash  
 \>\>\> python3 main.py x1 x2 x3 x4  
 
-ここで，
+ここで，  
 x1: 観測データの発生分布の平均  
 x2: 観測データの発生分布の分散  
 x3: 観測データの発生分布からのサンプリング数  
