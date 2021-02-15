@@ -5,7 +5,7 @@ class NormalDistribution(object):
     def __init__(self, weight):
         self.weight = weight
         
-        self.initial_sigma = 1 #今回は予測分布の分散を既知とする
+        self.initial_sigma = 0.05 #今回は予測分布の分散を既知とする(ODの残差を参照)
         self.mean = None
         self.sigma = None
         
@@ -22,7 +22,7 @@ class NormalDistribution(object):
         return self.sigma
     
     def predict(self, x_scalar):
-        self.mean = self._calc_posterior_mean(x_scalar)
+        self.mean = self._calc_posterior_mean(x_scalar)[0]
         self.sigma = self._calc_posterior_sigma(x_scalar)
 
     def _calc_posterior_mean(self, x_scalar):
@@ -31,5 +31,5 @@ class NormalDistribution(object):
         
     def _calc_posterior_sigma(self, x_scalar):
         x_vec = pp.trans_scalar_to_vec(x_scalar, term_num=self.weight.term_num)
-        return np.diag((1/self.initial_sigma) + np.dot(np.dot(x_vec.T, self.weight.prior_cov), x_vec))
+        return np.diag(self.initial_sigma + np.dot(np.dot(x_vec.T, self.weight.prior_cov), x_vec))
     
