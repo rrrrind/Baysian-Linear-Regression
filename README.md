@@ -2,7 +2,16 @@
 ベイズ線形回帰のフルスクラッチ実装
 
 ## How to use
-coming soon
+>>> docker-compose up
+(別のタブを開いて)
+>>> docker exec -it baysian-lr /bin/bash
+>>> python3 main.py x1 x2 x3 x4
+
+ここで，
+x1: 観測データの発生分布の平均
+x2: 観測データの発生分布の分散
+x3: 観測データの発生分布からのサンプリング数
+x4: 近似式(多項式)の項の数
 
 ## How to calculate
 ### はじめに
