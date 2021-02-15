@@ -9,10 +9,10 @@ class ObservationData(object):
     def generate(self, mu, var, sampling):
         # 正規分布に従いサンプリング
         self.x = np.random.normal(mu, np.sqrt(var), sampling)
-        # 残差
+        # 残差(0.05 * (0~1) = (0~0.05)のばらつき)，各プロットの分散
         residual = 0.05 * np.random.randn(len(self.x))
         # 正規分布 + 残差
-        self.y = ((np.exp((-(self.x - mu)**2)/(2*(std**2))) / (np.sqrt(2*np.pi)*std)) + residual)
+        self.y = (np.exp(-((self.x - mu)**2)/(2*var)) / np.sqrt(2*np.pi*var)) + residual
         
     @property
     def x_org(self):
