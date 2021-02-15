@@ -128,7 +128,7 @@ $¥ln{p({¥bf w}|{¥bf X} , {¥bf Y})}$は$¥ln{{p({¥bf Y}|{¥bf X})}}$の影�
 coming soon
 
 ## Results
-coming soon
+![result](https://github.com/rrrrind/Baysian-Linear-Regression/blob/main/workspace/results/result.gif)
 
 ## References
 - [3.5：線形回帰の例【緑ベイズ入門のノート】](https://www.anarchive-beta.com/entry/2020/11/12/100521)
